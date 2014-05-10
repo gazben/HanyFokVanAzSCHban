@@ -7,10 +7,12 @@ file_put_contents("index.html",
 
 "<html>
 <head>
-<title>H·ny fok van az 710-ben?</title>
+<meta charset= "UTF8"/>
+<title>H√°ny fok van az 710-ben?</title>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<h1>Ennyi fok uralkodik jelenleg az SCH710-es szob·j·ban</h1>
+<h1>Ennyi fok uralkodik jelenleg az SCH710-es szob√°j√°ban</h1>
 <br />
 Temp: ".$_GET["temp"]."
 <br />
@@ -22,6 +24,8 @@ Measure time:  ".date("F j, Y, g:i a")."
 <br >
 Opre feladat is live! made by Balu&&Gazben
 <br />
+
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 </body>
 </html>");
 
