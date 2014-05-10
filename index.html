@@ -16,7 +16,7 @@
             <div class="progress">
                 <div id="temp" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0"
                      aria-valuemin="0"
-                     aria-valuemax="100" style="width: 0;">
+                     aria-valuemax="50" style="width: 0;">
 
                 </div>
             </div>
@@ -56,14 +56,14 @@
 
                     mydata = JSON.parse(data);
 
-                    alert(mydata.temp);
+
 
                     document.getElementById("humidity").ariaValuenow = mydata.hum;
                     document.getElementById("humidity").style.width = mydata.hum + "%";
                     document.getElementById("humidity").innerHTML = "Humidity: " + mydata.hum + "%";
 
                     document.getElementById("temp").ariaValuenow = mydata.temp;
-                    document.getElementById("temp").style.width = mydata.temp + "%";
+                    document.getElementById("temp").style.width = mydata.temp*2 + "%";
                     document.getElementById("temp").innerHTML = "Temperature: " + mydata.temp + " °C";
 
                     document.getElementById("time").innerHTML = mydata.time;
