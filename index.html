@@ -3,6 +3,15 @@
     <title>Hány fok van az 710-ben?</title>
     <meta charset="UTF8"/>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        a {
+            color: #232323;
+        }
+
+        a:hover {
+           color: #232323;
+        }
+    </style>
 </head>
 <body>
 <div class="container" style="width: 70%; padding-top: 7%;">
@@ -41,17 +50,20 @@
 <div class="panel panel-default"
      style="text-align: center; bottom: 0; position: absolute; width: 100%; left: 0; right: 0; font-size: 12px;">
     <div class="panel-body">
-        Opre feladat is live! made by Balu & Gazben
+        Opre feladat is live! made by <a href="https://www.facebook.com/netpok?fref=ts">Balu</a> & <a href="https://www.facebook.com/bence.gazder?fref=nf">Gazben</a>
         <br/>
-        Help from: Gujci & Berci
+        Help from: <a href="https://www.facebook.com/gujgiczermate">Gujci</a> & <a href="https://www.facebook.com/koros.bertalan?fref=ts">Berci</a>
         <br/>
         az eszközökért köszönet
-        BME-MIT tanszéknek
-        és Oláh Barnabásnak
+        <a href="http://www.mit.bme.hu">BME-MIT</a> tanszéknek
+        és <a href="https://www.facebook.com/inraB?fref=ts">Oláh Barnabásnak</a>
         <br/>
         On Bootsrtapderp
+
     </div>
 </div>
+
+<div style="background: url(mit.png); position: absolute; bottom: -10px; right: -10px;"></div>
 
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
@@ -69,11 +81,11 @@
 
                     document.getElementById("humidity").ariaValuenow = mydata.hum;
                     document.getElementById("humidity").style.width = min(mydata.hum, 100) + "%";
-                    document.getElementById("humidity").innerHTML = "Humidity: " + mydata.hum + "%";
+                    document.getElementById("humidity").innerHTML = "Páratartalom: " + mydata.hum + "%";
 
                     document.getElementById("temp").ariaValuenow = mydata.temp;
                     document.getElementById("temp").style.width = min(mydata.temp * 2, 100) + "%";
-                    document.getElementById("temp").innerHTML = "Temperature: " + mydata.temp + " °C";
+                    document.getElementById("temp").innerHTML = "Hőmérséklet: " + mydata.temp + " °C";
 
                     document.getElementById("time").innerHTML = mydata.time;
                 });
