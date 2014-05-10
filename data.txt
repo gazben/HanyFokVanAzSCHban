@@ -1,0 +1,3 @@
+Temp: 26.28
+ Humidity: 24.61
+ Measure time:  May 10, 2014, 8:58 pm
