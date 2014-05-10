@@ -5,10 +5,11 @@
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" style="width: 70%; padding-top: 7%;">
     <div class="jumbotron">
-        <h1>Ennyi fok uralkodik jelenleg az SCH710-es szobájában</h1>
+        <h1>Hőmérő.sch</h1>
 
+        <p>Ennyi fok uralkodik jelenleg az SCH710-es szobájában</p>
 
         <div id="php">
 
@@ -36,14 +37,19 @@
         </div>
     </div>
 
-    <div class="panel panel-default" style="text-align: center; bottom: 20px; position: absolute;">
-        <div class="panel-body">
-            Opre feladat is live! made by Balu&&Gazben
-            <br/>
-            On Bootsrtap
-        </div>
+</div>
+<div class="panel panel-default"
+     style="text-align: center; bottom: 0; position: absolute; width: 100%; left: 0; right: 0;">
+    <div class="panel-body">
+        Opre feladat is live! made by Balu & Gazben
+        <br/>
+        Help from: Gujci & Berci
+        <br/>
+        On Bootsrtap
     </div>
 </div>
+
+
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
 <script>
@@ -57,13 +63,12 @@
                     mydata = JSON.parse(data);
 
 
-
                     document.getElementById("humidity").ariaValuenow = mydata.hum;
                     document.getElementById("humidity").style.width = mydata.hum + "%";
                     document.getElementById("humidity").innerHTML = "Humidity: " + mydata.hum + "%";
 
                     document.getElementById("temp").ariaValuenow = mydata.temp;
-                    document.getElementById("temp").style.width = mydata.temp*2 + "%";
+                    document.getElementById("temp").style.width = mydata.temp * 2 + "%";
                     document.getElementById("temp").innerHTML = "Temperature: " + mydata.temp + " °C";
 
                     document.getElementById("time").innerHTML = mydata.time;
