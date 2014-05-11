@@ -1,0 +1,53 @@
+a {
+    color: #232323;
+}
+
+a:hover {
+    color: #232323;
+}
+
+.my_container {
+    width: 70%;
+    padding-top: 7%;
+    cursor: default;
+}
+
+.info_text {
+    width: 0;
+    text-align: left;
+    padding-left: 8px;
+}
+
+.bottom_bar {
+    text-align: center;
+    bottom: 0;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    right: 0;
+    font-size: 12px;
+    cursor: default;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+.panel-body>div {
+    display: inline-block;
+}
+
+.image{
+    background-image: url(mit.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+}
+
+.banner{
+    position: absolute;
+    right: 8px;
+    cursor: pointer;
+    font-size: 10px;
+}

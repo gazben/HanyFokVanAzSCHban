@@ -3,103 +3,63 @@
     <title>Hány fok van az 710-ben?</title>
     <meta charset="UTF8"/>
     <link href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        a {
-            color: #232323;
-        }
-
-        a:hover {
-            color: #232323;
-        }
-    </style>
+    <link href="style.css" rel="stylesheet">
 </head>
 <body>
-<div class="container" style="width: 70%; padding-top: 7%; cursor: default;">
+<div class="container my_container">
     <div class="jumbotron">
         <h1>Hőmérő.sch</h1>
 
         <p>Ennyi fok uralkodik jelenleg az SCH710-es szobájában</p>
 
         <div id="php">
-
-
             <div class="progress">
-                <div id="temp" class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="0"
-                     aria-valuemin="0"
-                     aria-valuemax="50" style="width: 0; text-align: left; padding-left: 8px;">
+                <div id="temp" class="progress-bar progress-bar-warning info_text" role="progressbar" aria-valuenow="0"
+                     aria-valuemin="0" aria-valuemax="50">
 
                 </div>
             </div>
 
-
             <div class="progress">
-                <div class="progress-bar" id="humidity" role="progressbar" aria-valuenow="0" aria-valuemin="0"
-                     aria-valuemax="100"
-                     style="width: 0; text-align: left; padding-left: 8px;">
+                <div class="progress-bar info_text" id="humidity" role="progressbar" aria-valuenow="0" aria-valuemin="0"
+                     aria-valuemax="100">
 
                 </div>
             </div>
-
+            
             <p id="time"></p>
-
-
         </div>
     </div>
 
 </div>
-<div class="panel panel-default"
-     style="text-align: center; bottom: 0; position: absolute; width: 100%; left: 0; right: 0; font-size: 12px; cursor: default">
+
+<div class="panel panel-default bottom_bar">
     <div class="panel-body">
-        Opre feladat is live! made by <a href="https://www.facebook.com/netpok?fref=ts">Balu</a> & <a
-            href="https://www.facebook.com/bence.gazder?fref=nf">Gazben</a>
-        <br/>
-        Help from: <a href="https://www.facebook.com/gujgiczermate">Gujci</a> & <a
-            href="https://www.facebook.com/koros.bertalan?fref=ts">Berci</a>
-        <br/>
-        az eszközökért köszönet
-        <a href="http://www.mit.bme.hu/oktatas/targyak/vimia219">BME-MIT</a> tanszéknek
-        és <a href="https://www.facebook.com/inraB?fref=ts">Oláh Barnabásnak</a>
-        <br/>
-        On Bootsrtapderp
-
-        <div style=" position: absolute; bottom: 8px; right: 8px; text-align: right; cursor: pointer" onclick="window.location.href = 'http://mit.bme.hu';">
-            <div style="font-size: 8; font-weight: bold;">Főtámogatónk</div>
-            <div style="background-image: url(mit.png); background-repeat: no-repeat; background-position: center; background-size: contain; width: 50px; height: 50px;"> </div>
+        <div>
+            Opre feladat is live! made by <a href="https://www.facebook.com/netpok?fref=ts">Balu</a> & <a
+                href="https://www.facebook.com/bence.gazder?fref=nf">Gazben</a>
+            <br/>
+            Help from: <a href="https://www.facebook.com/gujgiczermate">Gujci</a> & <a
+                href="https://www.facebook.com/koros.bertalan?fref=ts">Berci</a>
+            <br/>
+            az eszközökért köszönet
+            <a href="http://www.mit.bme.hu/oktatas/targyak/vimia219">BME-MIT</a> tanszéknek
+            és <a href="https://www.facebook.com/inraB?fref=ts">Oláh Barnabásnak</a>
+            <br/>
+            On Bootsrtapderp
         </div>
+
+        <div class="banner" onclick="window.location.href = 'http://mit.bme.hu';">
+            <div>Főtámogatónk</div>
+            <div class="image"></div>
+        </div>
+
     </div>
 </div>
-
 
 <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
-<script>
-
-    (function update() {
-        $.ajax({
-            url: "data.json",
-            context: document.body
-        }).done(function (data) {
-
-                    mydata = JSON.parse(data);
-
-
-                    document.getElementById("humidity").ariaValuenow = mydata.hum;
-                    document.getElementById("humidity").style.width = min(mydata.hum, 100) + "%";
-                    document.getElementById("humidity").innerHTML = "Páratartalom: " + mydata.hum + "%";
-
-                    document.getElementById("temp").ariaValuenow = mydata.temp;
-                    document.getElementById("temp").style.width = min(mydata.temp * 2, 100) + "%";
-                    document.getElementById("temp").innerHTML = "Hőmérséklet: " + mydata.temp + " °C";
-
-                    document.getElementById("time").innerHTML = mydata.time;
-                });
-        setTimeout(update, 1000);
-    })();
-
-    var min = function (a, b) {
-        return a < b ? a : b;
-    }
-</script>
+<script src="app.js"></script>
 </body>
 
 </html>
