@@ -5,11 +5,7 @@
     $.ajax({
         url: "data.json",
         context: document.body
-    }).done(function (data) {
-
-            mydata = JSON.parse(data);
-
-
+    }).done(function (mydata) {
             document.getElementById("humidity").ariaValuenow = mydata.hum;
             document.getElementById("humidity").style.width = min(mydata.hum, 100) + "%";
             document.getElementById("humidity").innerHTML = "Páratartalom: " + mydata.hum + "%";
